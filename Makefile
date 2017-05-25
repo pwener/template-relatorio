@@ -1,4 +1,4 @@
-TARGET = TCC_FGA.pdf
+TARGET = Relatorio_FGA.pdf
 
 BIBTEX = bibtex
 LATEX = latex
@@ -19,7 +19,7 @@ EDITAVEIS_SOURCES = abreviaturas.tex  anexos.tex  conclusao.tex  informacoes.tex
 
 EDITAVEIS_FILES = $(addprefix $(EDITAVEIS_DIR)/, $(EDITAVEIS_SOURCES))
 
-MAIN_FILE = tcc.tex
+MAIN_FILE = relatorio.tex
 DVI_FILE  = $(addsuffix .dvi, $(basename $(MAIN_FILE)))
 AUX_FILE  = $(addsuffix .aux, $(basename $(MAIN_FILE)))
 PS_FILE   = $(addsuffix .ps, $(basename $(MAIN_FILE)))
@@ -47,7 +47,7 @@ clean:
 	rm -f *.pdf
 
 dist: clean
-	tar vczf tcc-fga-latex-$(VERSION).tar.gz *
+	tar vczf relatorio-fga-latex-$(VERSION).tar.gz *
 
 dist-clean: clean
 	rm -f $(PDF_FILE) $(TARGET)
